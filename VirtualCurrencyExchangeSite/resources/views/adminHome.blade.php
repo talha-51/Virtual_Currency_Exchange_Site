@@ -25,7 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/adminHome">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Chat Box</a>
@@ -39,21 +39,21 @@
                             More
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Edit Profile</a></li>
-                            <li><a class="dropdown-item" href="#">User List</a></li>
-                            <li><a class="dropdown-item" href="#">Transaction List</a></li>
-                            <li><a class="dropdown-item" href="#">User Reports</a></li>
+                            <li><a class="dropdown-item" href="/adminEditProfile">Edit Profile</a></li>
+                            <li><a class="dropdown-item" href="/adminViewAllUserInfo">User List</a></li>
+                            <li><a class="dropdown-item" href="/adminViewAllTransaction">Transaction List</a></li>
+                            <li><a class="dropdown-item" href="/adminUserReports">User Reports</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Announcement</a></li>
+                            <li><a class="dropdown-item" href="/adminAnnouncement">Announcement</a></li>
                         </ul>
                     </li>
                 </ul>
 
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                     <li class="nav-item mr-2">
-                        <a class="nav-link" href="#">Logout</a>
+                        <a class="nav-link" href="/logout">Logout</a>
                     </li>
                 </ul>
 
@@ -62,7 +62,7 @@
     </nav>
 
     <div class="text-center mt-5">
-        <h1>Welcome Home</h1>
+        <h1>Welcome Home {{$email}}</h1>
     </div>
 
 
