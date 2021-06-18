@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-    <title>All Users</title>
+    <title>Edit Profile</title>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/adminHome">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Chat Box</a>
@@ -39,21 +39,21 @@
                             More
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/adminEditProfile">Edit Profile</a></li>
-                            <li><a class="dropdown-item" href="/adminViewAllUserInfo">User List</a></li>
-                            <li><a class="dropdown-item" href="/adminViewAllTransaction">Transaction List</a></li>
-                            <li><a class="dropdown-item" href="/adminUserReports">User Reports</a></li>
+                            <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                            <li><a class="dropdown-item" href="#">change profile picture</a></li>
+                            <li><a class="dropdown-item" href="#">Transaction List</a></li>
+                            <li><a class="dropdown-item" href="#">request password recovery</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="/adminAnnouncement">Announcement</a></li>
+                            <li><a class="dropdown-item" href="#">Announcement</a></li>
                         </ul>
                     </li>
                 </ul>
 
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                     <li class="nav-item mr-2">
-                        <a class="nav-link" href="/logout">Logout</a>
+                        <a class="nav-link" href="#">Logout</a>
                     </li>
                 </ul>
 
@@ -62,49 +62,28 @@
     </nav>
 
     <div class="text-center mt-5 mb-5">
-        <h1>User Information</h1>
+        <h1>User Reports</h1>
     </div>
 
     <table style="margin:auto;max-width:900px" class="table table-striped">
         <thead>
           <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Password</th>
-            <th scope="col">Number</th>
-            <th scope="col">Type</th>
-            <th scope="col">Prime Status</th>
-            <th scope="col">Seller Status</th>
+            <th scope="col">Order NO</th>
+            <th scope="col">Date</th>
+            <th scope="col">Details</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>asd</td>
-            <td>asd@gmail.com</td>
-            <td>111</td>
-            <td>01700000000</td>
-            <td>admin</td>
-            <td>-</td>
-            <td>-</td>
+            <td>0123</td>
+            <td>2/05/2020</td>
+            <td>xyz</td>
           </tr>
-          <tr>
-            <td>qwe</td>
-            <td>qwe@gmail.com</td>
-            <td>222</td>
-            <td>01200000000</td>
-            <td>user</td>
-            <td>prime</td>
-            <td>verified</td>
+          < <td>1123</td>
+          <td>3/06/2020</td>
+          <td>yst</td>
           </tr>
-          <tr>
-            <td>zxc</td>
-            <td>zxc@gmail.com</td>
-            <td>333</td>
-            <td>01900000000</td>
-            <td>user</td>
-            <td>normal</td>
-            <td>unverified</td>
-          </tr>
+
         </tbody>
       </table>
 

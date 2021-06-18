@@ -11,30 +11,76 @@ class AdminHomeController extends Controller
         $email = $req->session()->get('email');
 
         if($req->session()->has('email')){
-            return view('adminHome', compact('email'));
+            return view('admin.adminHome', compact('email'));
         }else{
-            $req->session()->flash('msg', 'Invalid request');
+            $req->session()->flash('msg', 'You Have to Login First');
             return redirect('/login');
         }
     }
 
-    public function editProfile(){
-        return view('adminEditProfile');
+    public function editProfile(Request $req){
+        $email = $req->session()->get('email');
+
+        if($req->session()->has('email')){
+            return view('admin.adminEditProfile');
+        }else{
+            $req->session()->flash('msg', 'You Have to Login First');
+            return redirect('/login');
+        }
     }
 
-    public function viewAllUserInfo(){
-        return view('adminViewAllUserInfo');
+    public function viewAllUserInfo(Request $req){
+        $email = $req->session()->get('email');
+
+        if($req->session()->has('email')){
+            return view('admin.adminViewAllUserInfo');
+        }else{
+            $req->session()->flash('msg', 'You Have to Login First');
+            return redirect('/login');
+        }
     }
 
-    public function viewAllTransaction(){
-        return view('adminViewAllTransaction');
+    public function viewAllTransaction(Request $req){
+        $email = $req->session()->get('email');
+
+        if($req->session()->has('email')){
+            return view('admin.adminViewAllTransaction');
+        }else{
+            $req->session()->flash('msg', 'You Have to Login First');
+            return redirect('/login');
+        }
     }
 
-    public function userReports(){
-        return view('adminUserReports');
+    public function userReports(Request $req){
+        $email = $req->session()->get('email');
+
+        if($req->session()->has('email')){
+            return view('admin.adminUserReports');
+        }else{
+            $req->session()->flash('msg', 'You Have to Login First');
+            return redirect('/login');
+        }
     }
 
-    public function announcement(){
-        return view('adminAnnouncement');
+    public function announcement(Request $req){
+        $email = $req->session()->get('email');
+
+        if($req->session()->has('email')){
+            return view('admin.adminAnnouncement');
+        }else{
+            $req->session()->flash('msg', 'You Have to Login First');
+            return redirect('/login');
+        }
+    }
+
+    public function editUserInfo(Request $req){
+        $email = $req->session()->get('email');
+
+        if($req->session()->has('email')){
+            return view('admin.adminEditUserInfo');
+        }else{
+            $req->session()->flash('msg', 'You Have to Login First');
+            return redirect('/login');
+        }
     }
 }

@@ -62,15 +62,15 @@
     </nav>
 
     <div class="text-center mt-5 mb-5">
-        <h1>User Information</h1>
+        <h1>Transaction History</h1>
     </div>
 
     <table style="margin:auto;max-width:900px" class="table table-striped">
         <thead>
           <tr>
             <th scope="col">Product Name</th>
-            <th scope="col">Buyer Name</th>
-            <th scope="col">Seller Name</th>
+            <th scope="col">Buyer Email</th>
+            <th scope="col">Seller Email</th>
             <th scope="col">Product Amount</th>
             <th scope="col">Price(TAKA)</th>
             <th scope="col">Date of Purchase</th>
@@ -79,24 +79,24 @@
         <tbody>
           <tr>
             <td>10$</td>
-            <td>asd</td>
-            <td>zxc</td>
+            <td>asd@gmail.com</td>
+            <td>zxc@gmail.com</td>
             <td>2</td>
             <td>1700</td>
             <td>2-2-2021</td>
           </tr>
           <tr>
             <td>10rubel</td>
-            <td>zxc</td>
-            <td>qwe</td>
+            <td>zxc@gmail.com</td>
+            <td>qwe@gmail.com</td>
             <td>1</td>
             <td>1000</td>
             <td>7-6-2021</td>
           </tr>
           <tr>
             <td>10ars</td>
-            <td>zxc</td>
-            <td>asd</td>
+            <td>zxc@gmail.com</td>
+            <td>asd@gmail.com</td>
             <td>5</td>
             <td>500</td>
             <td>9-7-2021</td>

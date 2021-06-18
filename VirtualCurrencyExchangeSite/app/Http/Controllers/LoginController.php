@@ -18,11 +18,11 @@ class LoginController extends Controller
                 //set session or cookie
                 return redirect('/adminHome');
             }
-            elseif($req->email == "buyer@gmail.com"){
-                return redirect('/buyerHome');
+            elseif($req->email == "user@gmail.com"){
+                return redirect('/user/home');
             }
             elseif($req->email == "seller@gmail.com"){
-                return redirect('/sellerHome');
+                return redirect('/seller/home');
             }
         }else{
             //echo "Invalid User";

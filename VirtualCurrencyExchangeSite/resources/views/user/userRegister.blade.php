@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-    <title>Reports</title>
+    <title>Edit Profile</title>
 </head>
 
 <body>
@@ -25,10 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/adminHome">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Chat Box</a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Market Place</a>
@@ -39,54 +36,52 @@
                             More
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/adminEditProfile">Edit Profile</a></li>
-                            <li><a class="dropdown-item" href="/adminViewAllUserInfo">User List</a></li>
-                            <li><a class="dropdown-item" href="/adminViewAllTransaction">Transaction List</a></li>
-                            <li><a class="dropdown-item" href="/adminUserReports">User Reports</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="/adminAnnouncement">Announcement</a></li>
+                            <li><a class="dropdown-item" href="#">Announcement</a></li>
                         </ul>
                     </li>
                 </ul>
 
-                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-                    <li class="nav-item mr-2">
-                        <a class="nav-link" href="/logout">Logout</a>
-                    </li>
-                </ul>
 
             </div>
         </div>
     </nav>
 
-    <div class="text-center mt-5 mb-5">
-        <h1>User Reports</h1>
+    <div class="text-center mt-5">
+        <h1>Register as a Buyer</h1>
     </div>
+    <form style="max-width:500px;margin:auto;">
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" id="uName" >
+        </div>
 
-    <table style="margin:auto;max-width:900px" class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">Username</th>
-            <th scope="col">Issue</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>asd</td>
-            <td>Requesting for password recovery.</td>
-          </tr>
-          <tr>
-            <td>qwe</td>
-            <td>Seller did not devliver product in time. Seller name "zxc".</td>
-          </tr>
-          <tr>
-            <td>zxc</td>
-            <td>Prime feature is not working properly.</td>
-          </tr>
-        </tbody>
-      </table>
+        <div class="mb-3">
+            <label class="form-label">Address</label>
+            <input type="text" class="form-control" id="uAddress" >
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="uEmail" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" id="uPassword">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Re Type Password</label>
+            <input type="password" class="form-control" id="uRePassword">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="number" class="form-control" id="uPhone" aria-describedby="emailHelp">
+            <div id="mobileNoConstrainText" class="form-text">Must be 11 digits</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+        <a href="#"><button class="btn btn-primary">LogIn</button></a>
+    </form>
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
