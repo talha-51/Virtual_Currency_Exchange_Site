@@ -1,51 +1,87 @@
-<!doctype html>
-<html lang="en">
+@extends('layouts.reg')
+@include('layouts.app')
+@include('layouts.app-extra')
+@section('content')
+<div class="header bg-gradient-primary py-7 py-lg-8">
+</div>
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <div class="container mt--8 pb-5">
+        <!-- Table -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="card bg-secondary shadow border-0">
+                    <div class="card-body px-lg-5 py-lg-5">
+                        <div class="text-center mb-4">
+                            <h1 class="text-muted">Signin</h1>
+                        </div>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-    <title>Login</title>
-</head>
+                        <form role="form" method="POST" action="/login">
+                            @csrf
 
-<body>
-    <div class="text-center mt-5">
-        <h1>Please Signin</h1>
+                            <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }} mb-3">
+                                <div class="input-group input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                    </div>
+                                    <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="Email" type="email" name="email" value="{{ old('email') }}" value="admin@argon.com" required autofocus>
+                                </div>
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback" style="display: block;" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
+                                <div class="input-group input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                    </div>
+                                    <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password" type="password" value="" required>
+                                </div>
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback" style="display: block;" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="custom-control custom-control-alternative custom-checkbox">
+                                <input class="custom-control-input" name="remember" id="customCheckLogin" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
+                                <label class="custom-control-label" for="customCheckLogin">
+                                    <span class="text-muted">Remember me</span>
+                                </label>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary my-4">Sign in</button>
+                            </div>
+
+                            <center>
+                                <br>
+                                    <h3>{{session('msg')}}</h3>
+                                <br>
+                            </center>
+
+                        </form>
+
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6">
+                        @if (Route::has('password.request'))
+                            <a href="{{ route('password.request') }}" class="text-light">
+                                <small>Forgot password?</small>
+                            </a>
+                        @endif
+                    </div>
+                    <div class="col-6 text-right">
+                        <a href="/register" class="text-light">
+                            <small>{{ __('Create new account') }}</small>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-    <form style="max-width:500px;margin:auto;" method="POST">
-        <div class="mb-3 mt-5">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" name="password">
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" name="checkbox">
-            <label class="form-check-label" for="exampleCheck1">Remember me</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Signin</button>
-        <button type="submit" class="btn btn-primary">Signup</button>
-    </form>
 
-    <center>
-        <br>
-	        <h3>{{session('msg')}}</h3>
-	    <br>
-    </center>
-
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-    </script>
-</body>
-
-</html>
+@endsection

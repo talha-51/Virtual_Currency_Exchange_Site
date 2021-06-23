@@ -16,13 +16,13 @@ class LoginController extends Controller
         if($req->email == $req->password){
             if($req->email == "admin@gmail.com"){
                 //set session or cookie
-                return redirect('/adminHome');
+                return redirect()->route('adminHome');
             }
             elseif($req->email == "user@gmail.com"){
-                return redirect('/user/home');
+                return redirect('/user/Home');
             }
             elseif($req->email == "seller@gmail.com"){
-                return redirect('/seller/home');
+                return redirect()->route('seller.dashboard');
             }
         }else{
             //echo "Invalid User";

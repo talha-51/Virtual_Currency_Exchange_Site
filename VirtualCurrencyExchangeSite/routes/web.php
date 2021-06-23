@@ -13,15 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* Route::get('/', function () {
-    return view('login');
-}); */
-
 //admin
 
-Route::get('/login', 'LoginController@login');
+Route::get('/login', 'LoginController@login')->name('login');
 Route::post('/login', 'LoginController@verify');
-Route::get('/logout', 'LogoutController@index');
+Route::get('/logout', 'LogoutController@index')->name('logout');
+
+
 Route::get('/adminHome', 'AdminHomeController@index')->name('adminHome');
 Route::get('/adminEditProfile', 'AdminHomeController@editProfile')->name('adminEditProfile');
 Route::get('/adminViewAllUserInfo', 'AdminHomeController@viewAllUserInfo')->name('adminViewAllUserInfo');
@@ -32,37 +30,32 @@ Route::get('/adminEditUserInfo', 'AdminHomeController@editUserInfo')->name('admi
 
 // seller
 
-Route::get('/seller/login', function () {
-    return view('seller/login');
-});
-Route::get('/seller/register', function () {
-    return view('seller/sellerRegister');
-});
-Route::get('/seller/applyforprimeseller', function () {
-    return view('seller/applyForPrimeSeller');
-});
-Route::get('/seller/createsellpost', function () {
-    return view('seller/CreateSellPost');
-});
-Route::get('/seller/myposts', function () {
-    return view('seller/myposts');
-});
-Route::get('/seller/contactsupport', function () {
-    return view('seller/sellerContactSupport');
-});
-
-
+Route::get('/seller/dashboard','SellerController@home')->name('seller.dashboard');
+Route::get('/seller/applyforprimeseller','SellerController@applyForPrimeSeller')->name('seller.apply.prime');
+Route::get('/seller/createsellpost','SellerController@createSellPost')->name('seller.create.sell.post');
+Route::get('/seller/myposts','SellerController@myPosts')->name('seller.posts');
+Route::get('/seller/statements','SellerController@statements')->name('seller.statements');
+Route::get('/seller/orders','SellerController@orders')->name('seller.orders');
+Route::get('/seller/contactsupport','SellerController@contactSupport')->name('seller.contact.support');
+Route::get('/seller/orderdetails','SellerController@orderDetails')->name('seller.order.details');
+Route::get('/seller/editsellpost','SellerController@editSellPost')->name('seller.edit.sell.post');
+Route::get('/seller/editprofile','SellerController@editProfile')->name('seller.edit.profile');
+Route::get('/seller/statementdetails','SellerController@statementDetails')->name('seller.statement.details');
 
 // user or buyer
-Route::get('/user/editprofile', function () {
-    return view('user/editProfile');
-});
-Route::get('/user/orderhistory', function () {
-    return view('user/userorderHistory');
-});
-Route::get('/user/register', function () {
-    return view('user/userRegister');
-});
+Route::get('/user/Home', [App\Http\Controllers\UserController::class,'index']);
+
+Route::get('/user/editProfile', [App\Http\Controllers\UserController::class,'edit']);
+
+Route::get('/user/history', [App\Http\Controllers\UserController::class,'history']);
+
+Route::get('/user/register', [App\Http\Controllers\UserController::class,'register']);
+
+Route::get('/user/detailsHistory', [App\Http\Controllers\UserController::class,'detailsHistory'])->name('detailsOrder');
+Route::get('/user/follow', [App\Http\Controllers\UserController::class,'follow']);
+// Route::get('/user/list', [App\Http\Controllers\UserController::class,'list']);
+// Route::get('/user/create', [App\Http\Controllers\UserController::class,'create'] )->name('user.create');
+// Route::post('/user/create', [App\Http\Controllers\UserController::class,'insert'] )->name('user.insert');
 
 
 // Home

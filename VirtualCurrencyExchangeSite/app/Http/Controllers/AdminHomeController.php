@@ -13,7 +13,7 @@ class AdminHomeController extends Controller
         if($req->session()->has('email')){
             return view('admin.adminHome', compact('email'));
         }else{
-            $req->session()->flash('msg', 'You Have to Login First');
+            $req->session()->flash('msg', 'You Have to Login First !!!');
             return redirect('/login');
         }
     }
@@ -24,7 +24,7 @@ class AdminHomeController extends Controller
         if($req->session()->has('email')){
             return view('admin.adminEditProfile');
         }else{
-            $req->session()->flash('msg', 'You Have to Login First');
+            $req->session()->flash('msg', 'You Have to Login First !!!');
             return redirect('/login');
         }
     }
@@ -35,7 +35,7 @@ class AdminHomeController extends Controller
         if($req->session()->has('email')){
             return view('admin.adminViewAllUserInfo');
         }else{
-            $req->session()->flash('msg', 'You Have to Login First');
+            $req->session()->flash('msg', 'You Have to Login First !!!');
             return redirect('/login');
         }
     }
@@ -46,7 +46,7 @@ class AdminHomeController extends Controller
         if($req->session()->has('email')){
             return view('admin.adminViewAllTransaction');
         }else{
-            $req->session()->flash('msg', 'You Have to Login First');
+            $req->session()->flash('msg', 'You Have to Login First !!!');
             return redirect('/login');
         }
     }
@@ -57,7 +57,7 @@ class AdminHomeController extends Controller
         if($req->session()->has('email')){
             return view('admin.adminUserReports');
         }else{
-            $req->session()->flash('msg', 'You Have to Login First');
+            $req->session()->flash('msg', 'You Have to Login First !!!');
             return redirect('/login');
         }
     }
@@ -68,7 +68,7 @@ class AdminHomeController extends Controller
         if($req->session()->has('email')){
             return view('admin.adminAnnouncement');
         }else{
-            $req->session()->flash('msg', 'You Have to Login First');
+            $req->session()->flash('msg', 'You Have to Login First !!!');
             return redirect('/login');
         }
     }
@@ -79,7 +79,7 @@ class AdminHomeController extends Controller
         if($req->session()->has('email')){
             return view('admin.adminEditUserInfo');
         }else{
-            $req->session()->flash('msg', 'You Have to Login First');
+            $req->session()->flash('msg', 'You Have to Login First !!!');
             return redirect('/login');
         }
     }
