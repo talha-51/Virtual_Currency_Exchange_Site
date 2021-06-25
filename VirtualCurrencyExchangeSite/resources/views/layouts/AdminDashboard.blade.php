@@ -41,24 +41,13 @@
                 <div class=" dropdown-header noti-title">
                     <h6 class="text-overflow m-0">Welcome!</h6>
                 </div>
-                <a href="/profile" class="dropdown-item">
+                <a href='{{route('adminEditProfile')}}' class="dropdown-item">
                     <i class="ni ni-single-02"></i>
                     <span>My profile</span>
                 </a>
-                <a href="#" class="dropdown-item">
-                    <i class="ni ni-settings-gear-65"></i>
-                    <span>Settings</span>
-                </a>
-                <a href="#" class="dropdown-item">
-                    <i class="ni ni-calendar-grid-58"></i>
-                    <span>Activity</span>
-                </a>
-                <a href="#" class="dropdown-item">
-                    <i class="ni ni-support-16"></i>
-                    <span>Support</span>
-                </a>
                 <div class="dropdown-divider"></div>
-                <a href="{{ route('logout') }}" class="dropdown-item">
+                <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
                     <i class="ni ni-lock-circle-open"></i>
                     <span>Logout</span>
                 </a>

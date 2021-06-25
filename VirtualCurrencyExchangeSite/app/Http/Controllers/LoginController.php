@@ -11,11 +11,11 @@ class LoginController extends Controller
     }
 
     public function verify(Request $req){
-         $req->session()->put('email', $req->email);
 
         if($req->email == $req->password){
+            $req->session()->put('email', $req->email);
+            
             if($req->email == "admin@gmail.com"){
-                //set session or cookie
                 return redirect()->route('adminHome');
             }
             elseif($req->email == "user@gmail.com"){
