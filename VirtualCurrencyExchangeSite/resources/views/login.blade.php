@@ -1,6 +1,7 @@
 @extends('layouts.reg')
 @include('layouts.app')
 @include('layouts.app-extra')
+@section('pageTitle','Sign In')
 @section('content')
 <div class="header bg-gradient-primary py-7 py-lg-8">
 </div>
@@ -12,7 +13,7 @@
                 <div class="card bg-secondary shadow border-0">
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="text-center mb-4">
-                            <h1 class="text-muted">Signin</h1>
+                            <h1 class="text-muted">Sign In</h1>
                         </div>
 
 
@@ -24,7 +25,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                     </div>
-                                    <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="Email" type="email" name="email" value="{{ old('email') }}" value="admin@argon.com" required autofocus>
+                                    <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="Email" type="email" name="email" value="" required autofocus>
                                 </div>
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" style="display: block;" role="alert">
@@ -74,7 +75,7 @@
                         @endif
                     </div>
                     <div class="col-6 text-right">
-                        <a href="/register" class="text-light">
+                        <a href="{{ route('register') }}" class="text-light">
                             <small>{{ __('Create new account') }}</small>
                         </a>
                     </div>

@@ -7,7 +7,7 @@
 
 
 
-        <title>Registration</title>
+        <title>@yield('pageTitle')</title>
     </head>
     <body class="bg-default">
 
@@ -26,7 +26,7 @@
 
 <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
     <div class="container px-4">
-        <a class="navbar-brand" href="/home">
+        <a class="navbar-brand" href="{{route('home.index')}}">
             {{-- <img src="{{ asset('argon') }}/img/brand/blue.png" /> --}}
             <h1><b style="color:white;">VCES</b></h1>
         </a>
@@ -54,7 +54,7 @@
             <ul class="navbar-nav ml-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="/reg">
+                    <a class="nav-link nav-link-icon" href="{{ route('register') }}">
                         <i class="ni ni-circle-08"></i>
                         <span class="nav-link-inner--text">Register</span>
                     </a>
