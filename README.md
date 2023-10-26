@@ -1,6 +1,11 @@
 User types & their features:
 
-Admin 2. Buyer 3. Seller 4. Prime seller common (ALL):
+1. Admin
+2. Buyer
+3. Seller
+4. Prime seller
+
+Common Features (ALL):
 
 1. Log in
 2. Log out
