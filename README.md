@@ -1,26 +1,28 @@
 User types & their features:
 
 Admin 2. Buyer 3. Seller 4. Prime seller common (ALL):
-log in
-log out
-edit profile
+
+1. Log in
+2. Log out
+3. Edit profile
 
 ADMIN (My part):
 
 1. Can view user list
-2. Remove user
-3. Track transaction
-4. Send announcement
-5. User validation
-6. View user reports
-7. Password recovery
-8. View overall sells data
-9. Buyer activity monitoring
-10. Total traffic number in the site
-11. Total number of users
-12. Number of total sales
-13. Numbers of each type of users
-14. Total number of orders
+2. Add another admin
+3. Remove user
+4. Track transaction
+5. Send announcement
+6. User validation
+7. View user reports
+8. Password recovery
+9. View overall sells data
+10. Buyer activity monitoring
+11. Total traffic number in the site
+12. Total number of users
+13. Number of total sales
+14. Numbers of each type of users
+15. Total number of orders
 
 USER (buyer):
 
