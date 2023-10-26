@@ -137,7 +137,8 @@ class AdminHomeController extends Controller
     }
 
     public function announcement(Request $req){
-        $announcements = DB::table('announcements')->where('status','=','active')->get();
+        $announcements = DB::table('announcements')->where('status','=','active')->orderBy('ann_id', 'desc')
+                                                                                 ->get();
 
         return view('admin.adminAnnouncement')->with('adminAnnouncement',$announcements);
     }

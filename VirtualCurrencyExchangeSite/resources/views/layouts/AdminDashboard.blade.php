@@ -35,7 +35,7 @@
                         aria-expanded="false">
                         <div class="media align-items-center">
                             <span class="avatar avatar-sm rounded-circle">
-                                <img alt="Image placeholder" src="{{ asset('admin/adminDP.jpg') }}">
+                                <img alt="Image placeholder" src="{{ asset('admin/adminDP1.jpg') }}">
                             </span>
                         </div>
                     </a>
@@ -48,7 +48,8 @@
                             <span>My profile</span>
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
+                        <a href="{{ route('logout') }}" class="dropdown-item"
+                            onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                             <i class="ni ni-lock-circle-open"></i>
                             <span>Logout</span>
@@ -144,11 +145,11 @@
                 <!-- User -->
                 <ul class="navbar-nav align-items-center d-none d-md-flex">
                     <li class="nav-item dropdown">
-                        <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
+                        <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             <div class="media align-items-center">
                                 <span class="avatar avatar-sm rounded-circle">
-                                    <img alt="Image placeholder" src="{{ asset('admin/adminDP.jpg') }}">
+                                    <img alt="Image placeholder" src="{{ asset('admin/adminDP1.jpg') }}">
                                 </span>
                                 <div class="media-body ml-2 d-none d-lg-block">
                                     <span class="mb-0 text-sm  font-weight-bold">Admin</span>
@@ -164,7 +165,8 @@
                                 <span>My profile</span>
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
+                            <a href="{{ route('logout') }}" class="dropdown-item"
+                                onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                                 <i class="ni ni-lock-circle-open"></i>
                                 <span>Logout</span>
@@ -206,7 +208,8 @@
                             <a href="https://www.updivision.com" class="nav-link" target="_blank">Updivision</a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About
+                            <a href="https://www.creative-tim.com/presentation" class="nav-link"
+                                target="_blank">About
                                 Us</a>
                         </li>
                         <li class="nav-item">
