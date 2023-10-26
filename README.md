@@ -5,62 +5,62 @@ log in
 log out
 edit profile
 
-ADMIN:
+ADMIN (My part):
 
-can view user list
-remove user
-track transaction
-send announcement
-user validation
-view user reports
-password recovery
-view overall sells data
-buyer activity monitoring
-total traffic number in the site
-total number of users
-number of total sales
-numbers of each type of users
-total number of orders
+1. Can view user list
+2. Remove user
+3. Track transaction
+4. Send announcement
+5. User validation
+6. View user reports
+7. Password recovery
+8. View overall sells data
+9. Buyer activity monitoring
+10. Total traffic number in the site
+11. Total number of users
+12. Number of total sales
+13. Numbers of each type of users
+14. Total number of orders
 
 USER (buyer):
 
-register
-view statements
-change profile picture
-request password recovery
-contact support
-can view selling post
-search product or seller
-follow seller add and see list
-give seller review / rating
-report.
-Place Order
-View order history seller:
-register
-order receive (daily and monthly limited)
-view statements
-change profile picture
-request password recovery
-contact support
-report
-create selling post (limited)
-edit post
-delete post
-apply for prime seller
-view order history
-view post history
-get points for selling and posting
-purchase limitation slot, name change coupon with points Prime seller:
-register
-order receive (unlimited)
-view statements
-change profile picture
-request password recovery
-contact support
-report
-create selling post
-edit post
-delete post
-view order history
-view post history
-can change name (limited)
+1. register
+2. view statements
+3. change profile picture
+4. request password recovery
+5. contact support
+6. can view selling post
+7. search product or seller
+8. follow seller add and see list
+9. give seller review / rating
+10. report.
+11. Place Order
+12. View order history seller:
+13. register
+14. order receive (daily and monthly limited)
+15. view statements
+16. change profile picture
+17. request password recovery
+18. contact support
+19. report
+20. create selling post (limited)
+21. edit post
+22. delete post
+23. apply for prime seller
+24. view order history
+25. view post history
+26. get points for selling and posting
+27. purchase limitation slot, name change coupon with points Prime seller:
+28. register
+29. order receive (unlimited)
+30. view statements
+31. change profile picture
+32. request password recovery
+33. contact support
+34. report
+35. create selling post
+36. edit post
+37. delete post
+38. view order history
+39. view post history
+40. can change name (limited)
